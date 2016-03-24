@@ -1,0 +1,56 @@
+<form name="InfoForm">
+<div class="row orderch">
+
+    <div class="medium-4 small-4 columns orderchb">
+
+    <button onclick="history.back()">&#8592; Назад</button>
+
+    </div>
+    <div class="medium-4 small-4 columns ordercht">Заказ</div>
+    <div class="medium-4 small-4 columns orderchs">
+    <button ng-click="save()" ng-disabled="!canSave()">Сохранить</button>
+    </div>
+
+</div>
+
+<div class="row">
+
+    <div class="medium-8 small-8 columns orderccont">
+<!-- <div><pre ng-bind="toJSON(currents)"></pre></div> -->
+        <p><span>Имя заказчика:</span> {{currents.name}}</p>
+
+        <p><span>Название картины:</span> {{currents.namePict}}</p>
+
+        <p><span>Дата заявки:</span> {{currents.createdAt | date:'MM.dd.yyyy, h:mma'}}</p>
+
+        <p><span>Цена:</span> {{currents.priceIdentifier}}{{currents.price}}</p>
+
+        <p><span>Телефон:</span> {{currents.telephone}}</p>
+
+        <p><span>Страна, город:</span> {{currents.country}}</p>
+
+        <p><span>Адрес доставки:</span> {{currents.address}}</p>
+
+    </div>
+    <div class="medium-4 small-4 columns ordercstatus">
+            <div class="orderstatuss">Статус:</div>
+            <select ng-model="currents.purchaseState" required>
+              <option ng-selected="0" value="0">Новый</option>
+              <option ng-selected="1" value="1">В работе</option>
+              <option ng-selected="2" value="2">Отмена</option>
+              <option ng-selected="3" value="3">Закрыт</option>
+            </select>
+
+            <div class="orderstatusse"><span>Изменен: </span>{{currents.updatedAt | date:'MM.dd.yyyy'}}<br/>{{currents.updatedAt | date:'h:mma'}}</div>
+    </div>
+
+</div>
+
+<div class="row">
+    <div class="medium-12 small-12 columns orderccom">
+        <label><div class="orderccomlabel">Коментарий:</div>
+            <textarea ng-model="currents.comment" rows="5"></textarea>
+        </label>
+    </div>
+</div>
+</form>

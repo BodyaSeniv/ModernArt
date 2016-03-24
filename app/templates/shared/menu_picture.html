@@ -1,0 +1,12 @@
+<div class="row">
+    <div style="padding:0px" class="middle-8 small-8 columns">
+        <ul class="navmenut inline-list">
+          <li><a ng-class="getClass('/pictures/current')" href="#/pictures/current">Текущее</a></li>
+          <li><a ng-class="getClass('/pictures/archive')" href="#/pictures/archive">Архив</a></li>
+        </ul>
+    </div>
+    <div class="middle-4 small-4 columns newpictureb">
+        <button ng-show='myButton' ui-sref="card.picturecard">+ Новая картина</button>
+    </div>
+
+</div>

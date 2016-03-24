@@ -1,0 +1,15 @@
+<div class="wraplogin">
+  <p class="logotitle">система администрирование</p>
+  <img src="images/logo.png" width="180" height="87" />
+  <form>
+    <input name="link" type="hidden" value="" />
+    <input class="epass" ng-model="user.username" name="login" type="text" size="25" maxlength="30" value="" placeholder="E-mail" />
+    <input class="epass" ng-model="user.password" name="pd" type="password" size="25" maxlength="30" value="" placeholder="Пароль" />
+    <p class="remember_me">
+      <label>
+        <input ng-model="user.save" type="checkbox" name="remember_me" >Запомнить меня
+      </label>
+    </p>
+    <input ng-click="signin()" class="buttom" type="submit" name="enter" value="Войти" />
+  </form>
+</div>

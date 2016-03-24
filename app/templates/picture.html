@@ -1,0 +1,22 @@
+<div class="row">
+  <table style="width:100%">
+    <thead>
+      <tr style="background: #dedede;">
+        <th width="90">Preview</th>
+        <th>Название картины</th>
+        <th width="150">Художник</th>
+        <th width="150">Дата сохранения</th>
+        <th width="150">Цена</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="artwork in artworks | orderBy:'-updatedAt'" ui-sref="card.picturecardedit({id: artwork.objectId})" class="norm">
+        <td class="pic"><img ng-src="{{artwork.imageFile.url}}" width="54"  height="54"></td>
+        <td>{{artwork.name}}</td>
+        <td>{{artwork.firstname}}</td>
+        <td>{{artwork.updatedAt | date:'MM.dd.yyyy'}}<br/>{{artwork.updatedAt | date:'h:mma'}}</td>
+        <td>{{artwork.priceIdentifier}}{{artwork.price}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

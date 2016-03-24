@@ -1,0 +1,31 @@
+<div class="row">
+
+  <ul class="navmenut inline-list">
+    <li><a href="" class="active">Мой профиль</a></li>
+  </ul>
+
+</div>
+
+
+<form name="InfoForm">
+<div class="row picturecard" style="padding-top:20px;">
+  <div class="row" style="padding:0 15px 0 15px;">
+    <div class="small-6 columns">
+      <div class="orderccomlabel">Сменить пароль</div>
+    </div>
+  </div>
+  <div class="small-6 columns"  style="height:45px">
+    <input type="password" id="righ-label" ng-model="pass.newPass" placeholder="Введите новый пароль" required>
+  </div>
+  <div class="small-6 columns" style="height:45px">
+
+  </div>
+  <div class="small-6 columns">
+    <input type="password" id="right-label" ng-model="pass.newPassConfirm" placeholder="Повторите новый пароль" style="margin-bottom: 10px;" required>
+    <button type="button" style="float:right; width:100px; height:33px;" ng-disabled="!canSave() ||   pass.newPass != pass.newPassConfirm" ng-click="savePass()">Ok</button>
+  </div>
+  <div class="small-6 columns">
+
+  </div>
+</div>
+</form>

@@ -1,0 +1,32 @@
+{
+  "name": "eReader",
+  "version": "0.0.0",
+  "authors": [
+    "Bodya Seniv"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular": "~1.4.7",
+    "angular-ui-router": "~0.2.15",
+    "ngstorage": "~0.3.9",
+    "angular-resource": "~1.4.7",
+    "ng-file-upload": "~9.0.9",
+    "angular-cookies": "~1.4.7",
+    "foundation": "~5.5.3",
+    "angular-foundation": "~0.8.0",
+    "angular-animate": "~1.4.7",
+    "angular-local-storage": "~0.2.3",
+    "moment": "~2.11.1"
+  }
+}

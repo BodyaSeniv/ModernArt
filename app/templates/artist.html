@@ -1,0 +1,30 @@
+<div class="row">
+  <div style="padding: 0px; height: 53px;" class="middle-8 small-8 columns">
+  </div>
+  <div class="middle-4 small-4 columns newpictureb">
+    <form name="" method="" action="artistcard.html">
+      <button ui-sref="card.artistcard">+ Добавить художника</button>
+    </form>
+  </div>
+
+</div>
+
+
+<div class="row">
+  <table style="width:100%">
+    <thead>
+      <tr style="background: #dedede;">
+        <th width="90">Аватар</th>
+        <th>Имя художника</th>
+        <th width="150">Кол-во картин</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="artist in artists | orderBy:'-updatedAt'" ui-sref="card.artistcardedit({id: artist.objectId})" class="norm">
+        <td class="pica"><img ng-src="{{artist.imageFile.url}}" width="58"  height="58"></td>
+        <td>{{artist.firstName}}</td>
+        <td>{{artist.prodano}} продано</br>{{artist.catalog}} в каталоге</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

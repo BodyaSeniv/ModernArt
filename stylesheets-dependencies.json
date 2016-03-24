@@ -1,0 +1,7 @@
+{
+  "dependencies": [
+    "./css/**/*.css",
+    "./bower_components/foundation/css/foundation.css",
+    "./bower_components/foundation/css/normalize.css"
+  ]
+}

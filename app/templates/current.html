@@ -1,0 +1,22 @@
+<div class="row">
+<table style="width:100%">
+  <thead>
+    <tr style="background: #dedede;">
+      <th width="200">Имя заказчика</th>
+      <th>Название картины</th>
+      <th width="150">Дата покупки</th>
+      <th width="150">Статус</th>
+      <th width="150">Цена</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="current in currents | orderBy:'-updatedAt'" ui-sref="card.ordercard({id: current.objectId})" ng-class="current.purchaseState == 0 ? 'newt' : (current.purchaseState == 1 ? 'inworkt' : (current.purchaseState == 2 ? 'canceledt' : 'norm'))">
+      <td>{{current.name}}</td>
+      <td>{{current.namePict}}</td>
+      <td>{{current.createdAt | date:'MM.dd.yyyy'}}<br/>{{current.createdAt | date:'h:mma'}}</td>
+        <td>{{current.purchaseStateText}}<div style="font-size: 12px;">{{current.updatedAt | date:'MM.dd.yyyy, h:mma'}}</div></td>
+      <td>{{current.priceIdentifier}}{{current.price}}</td>
+    </tr>
+  </tbody>
+</table>
+</div>

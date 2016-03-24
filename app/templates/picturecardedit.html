@@ -1,0 +1,46 @@
+<form name="InfoForm">
+  <div class="row orderch">
+
+    <div class="medium-4 small-4 columns orderchb">
+
+      <button onclick="history.back()">&#8592; Назад</button>
+
+    </div>
+    <div class="medium-4 small-4 columns ordercht">Картина</div>
+    <div class="medium-4 small-4 columns orderchs">
+      <button ng-click="delete()">Удалить</button>
+      <button ng-click="save(file)" ng-disabled="!canSave()">Сохранить</button>
+
+    </div>
+
+  </div>
+
+  <div class="row">
+
+    <div class="medium-12 small-12 columns picturecard">
+      <!-- <div><pre ng-bind="toJSON(Artwork)"></pre></div> -->
+      <select style="width:350px"  ng-model="Artwork.Artist.objectId" required>
+        <option ng-repeat="artist in artists" value="{{artist.objectId}}">{{artist.firstName}}</option>
+      </select>
+
+      <div class="pictureselect">
+        <img ng-src="{{Artwork.imageFile.url}}" id="minipic" height="30%" width="30%"><br>
+        <input type="file" onchange="angular.element(this).scope().handleFiles(this.files)" ngf-select ng-model="file" id="custom-file-input" class="custom-file-input" />
+      </div>
+
+      <input type="text" ng-model="Artwork.name" placeholder="Название картины (на английском)" required/>
+
+      <input type="text" ng-model="Artwork.price" placeholder="Цена" required/>
+
+      <label><div class="orderccomlabel">Описание картины <span style="color: #000">на русском:</span></div>
+        <textarea ng-model="Artwork.details" placeholder="Введите описание картины" rows="4" required></textarea>
+      </label>
+
+      <label style="margin-top: 23px"><div class="orderccomlabel">Описание картины <span style="color: #000">на английском:</span></div>
+        <textarea ng-model="Artwork.detailsEng" placeholder="Введите описание картины" rows="4" required></textarea>
+      </label>
+
+    </div>
+
+  </div>
+</form>

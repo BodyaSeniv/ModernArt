@@ -1,0 +1,35 @@
+<div class="row orderheader">
+<div class="medium-3 small-3 columns logo">
+<p class="logotitleh">система администрирование</p>
+<img src="images/logo.png" width="108" height="52" />
+</div>
+<div class="medium-9 small-3 columns">
+
+
+<div class="userwrap row">
+{{user.username}}
+<img src="images/user.png" width="20" height="20" />
+</div>
+
+
+
+<!--Menu-->
+    <div id = "menu" class="row">
+        <ul class="navmenu inline-list">
+            <li class="before"><a ng-class="getClass('/orders/current')" href="#/orders/current">Заказы</a></li>
+            <li class="before"><a ng-class="getClass('/pictures/current')" href="#/pictures/current">Картины</a></li>
+            <li class="before"><a ng-class="getClass('/artists')" href="#/artists">Художник</a></li>
+            <li class="before"><a ng-class="getClass('/settings')" href="#/settings">Натройки</a></li>
+            <li><a ng-click="signout()">Выйти</a></li>
+        </ul>
+    </div>
+<!--/Menu-->
+
+
+
+
+</div>
+
+
+
+</div>
